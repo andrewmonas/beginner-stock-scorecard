@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How it works · Beginner Stock Scorecard</title>
+  <meta name="description" content="The complete scoring method, in plain language, with every weight and threshold.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="how">
+  <div class="disclaimer-banner" role="note">Educational information only, not financial advice. Scores are based on past data and can be wrong. Do your own research. <a href="disclaimer.html">Full disclaimer</a></div>
+  <header id="site-header"></header>
+  <main class="wrap prose">
+    <h1>How the score works</h1>
+    <p class="lede">No secret formula. Every number below comes straight from the code that computes the scores, so this
+      page always matches what the site actually does.</p>
+
+    <h2>The big picture</h2>
+    <ol>
+      <li>Every weekday evening, after the US stock market closes, a small program downloads daily closing prices
+        for about 100 of the largest US companies and a few major index funds.</li>
+      <li>For each one it measures a few things about the <em>past</em>: its trend, how it did compared with the
+        market, and how calmly its price moved.</li>
+      <li>Each part becomes a number from 0 to 100. The total score is a weighted average of the parts.</li>
+      <li>The score becomes a label: <span id="labels"></span>.</li>
+    </ol>
+    <div class="callout warn">The score only looks backwards. Markets react to news nobody can predict, so a “Looks
+      strong” stock can fall sharply tomorrow. Treat it as a starting point for learning, never as a reason on its own.</div>
+
+    <h2>The weights</h2>
+    <div id="weights"></div>
+
+    <h2>How each part is scored</h2>
+    <p>Each measurement is turned into 0 to 100 with a straight-line scale between two anchor points. Anything past an
+      anchor is capped at 0 or 100. For example, if “10% below” scores 0 and “10% above” scores 100, then exactly
+      at the average scores 50 and 5% above scores 75.</p>
+    <div id="parts"></div>
+
+    <h2>Which stocks are included</h2>
+    <p>Only large, well-established companies (about the 100 biggest in the S&amp;P 500) and major index funds like
+      SPY, QQQ and VTI. No penny stocks, no meme stocks, no crypto. A stock needs at least one year of price history
+      to be scored.</p>
+
+    <h2>Where the data comes from</h2>
+    <ul>
+      <li><strong>Prices:</strong> daily closing prices from Alpaca Markets (IEX feed), adjusted for stock splits and dividends.</li>
+      <li><strong>Smart money (optional):</strong> insider trades (SEC Form 4) and congressional trade reports from Quiver
+        Quant. <span id="smart-status"></span></li>
+    </ul>
+
+    <h2>Known limits</h2>
+    <ul>
+      <li>Past prices can't see future news: earnings surprises, lawsuits, recessions.</li>
+      <li>Trend and momentum signals often fail when the market suddenly changes direction.</li>
+      <li>The IEX feed covers a slice of all US trading. Closing prices can differ by a few cents from other sources.</li>
+      <li>No company fundamentals (profits, debt, valuation) are included.</li>
+      <li>The <a href="track-record.html">track record</a> is the honest test of whether any of this works.</li>
+    </ul>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="js/common.js"></script>
+  <script src="js/how.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+"""Optional 'smart money' signal from Quiver Quant (needs a paid Quiver API key).
+
+Counts reported insider purchases (Form 4 code P) and sales (code S), plus
+congressional purchases and sales, over the last 90 days.
+net = purchases - sales. Any failure here just turns the signal off for the run.
+"""
+from __future__ import annotations
+
+from datetime import date, timedelta
+
+import pandas as pd
+
+QUIVER_BASE = "https://api.quiverquant.com/beta"
+ENDPOINTS = {"insider": "/live/insiders", "congress": "/live/congresstrading"}
+
+
+def _first(row: dict, *keys):
+    for k in keys:
+        if row.get(k) not in (None, ""):
+            return row[k]
+    return None
+
+
+def _to_date(value) -> date | None:
+    try:
+        return pd.Timestamp(value).date()
+    except (ValueError, TypeError):
+        return None
+
+
+def normalize(rows: list[dict], kind: str) -> list[dict]:
+    """Turn raw Quiver rows into {ticker, date, direction} with direction +1 or -1."""
+    out = []
+    for r in rows:
+        ticker = _first(r, "Ticker", "ticker")
+        d = _to_date(_first(r, "Date", "TransactionDate", "Traded", "transaction_date", "fileDate", "ReportDate"))
+        if not ticker or d is None:
+            continue
+        if kind == "insider":
+            code = str(_first(r, "TransactionCode", "transaction_code", "Code") or "").upper()
+            direction = 1 if code == "P" else -1 if code == "S" else 0
+        else:
+            tx = str(_first(r, "Transaction", "transaction_type", "Type") or "").lower()
+            direction = 1 if "purchase" in tx else -1 if "sale" in tx else 0
+        if direction:
+            out.append({"ticker": str(ticker).upper(), "date": d, "direction": direction, "kind": kind})
+    return out
+
+
+def fetch_trades(api_key: str, timeout: int = 30) -> list[dict]:
+    import requests
+
+    headers = {"Authorization": f"Bearer {api_key}", "Accept": "application/json"}
+    trades = []
+    for kind, path in ENDPOINTS.items():
+        resp = requests.get(QUIVER_BASE + path, headers=headers, timeout=timeout)
+        resp.raise_for_status()
+        trades += normalize(resp.json(), kind)
+    return trades
+
+
+def net_activity(trades: list[dict], ticker: str, as_of: date, days: int = 90) -> int:
+    start = as_of - timedelta(days=days)
+    return sum(t["direction"] for t in trades if t["ticker"] == ticker and start < t["date"] <= as_of)

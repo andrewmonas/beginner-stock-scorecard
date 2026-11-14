@@ -1,0 +1,118 @@
+ticker,name,sector,type
+SPY,SPDR S&P 500 ETF,Broad market ETF,etf
+VOO,Vanguard S&P 500 ETF,Broad market ETF,etf
+VTI,Vanguard Total Stock Market ETF,Broad market ETF,etf
+QQQ,Invesco QQQ (Nasdaq-100) ETF,Broad market ETF,etf
+DIA,SPDR Dow Jones Industrial Average ETF,Broad market ETF,etf
+IWM,iShares Russell 2000 ETF,Broad market ETF,etf
+AAPL,Apple,Information Technology,stock
+MSFT,Microsoft,Information Technology,stock
+NVDA,NVIDIA,Information Technology,stock
+AVGO,Broadcom,Information Technology,stock
+ORCL,Oracle,Information Technology,stock
+CRM,Salesforce,Information Technology,stock
+ADBE,Adobe,Information Technology,stock
+AMD,Advanced Micro Devices,Information Technology,stock
+CSCO,Cisco Systems,Information Technology,stock
+ACN,Accenture,Information Technology,stock
+IBM,IBM,Information Technology,stock
+INTU,Intuit,Information Technology,stock
+QCOM,Qualcomm,Information Technology,stock
+TXN,Texas Instruments,Information Technology,stock
+NOW,ServiceNow,Information Technology,stock
+AMAT,Applied Materials,Information Technology,stock
+MU,Micron Technology,Information Technology,stock
+LRCX,Lam Research,Information Technology,stock
+KLAC,KLA,Information Technology,stock
+ADI,Analog Devices,Information Technology,stock
+PANW,Palo Alto Networks,Information Technology,stock
+ANET,Arista Networks,Information Technology,stock
+INTC,Intel,Information Technology,stock
+APH,Amphenol,Information Technology,stock
+CRWD,CrowdStrike,Information Technology,stock
+SNPS,Synopsys,Information Technology,stock
+CDNS,Cadence Design Systems,Information Technology,stock
+PLTR,Palantir Technologies,Information Technology,stock
+GOOGL,Alphabet (Google),Communication Services,stock
+META,Meta Platforms,Communication Services,stock
+NFLX,Netflix,Communication Services,stock
+DIS,Walt Disney,Communication Services,stock
+TMUS,T-Mobile US,Communication Services,stock
+VZ,Verizon,Communication Services,stock
+T,AT&T,Communication Services,stock
+CMCSA,Comcast,Communication Services,stock
+AMZN,Amazon,Consumer Discretionary,stock
+TSLA,Tesla,Consumer Discretionary,stock
+HD,Home Depot,Consumer Discretionary,stock
+MCD,McDonald's,Consumer Discretionary,stock
+LOW,Lowe's,Consumer Discretionary,stock
+BKNG,Booking Holdings,Consumer Discretionary,stock
+TJX,TJX Companies,Consumer Discretionary,stock
+NKE,Nike,Consumer Discretionary,stock
+SBUX,Starbucks,Consumer Discretionary,stock
+WMT,Walmart,Consumer Staples,stock
+COST,Costco,Consumer Staples,stock
+PG,Procter & Gamble,Consumer Staples,stock
+KO,Coca-Cola,Consumer Staples,stock
+PEP,PepsiCo,Consumer Staples,stock
+PM,Philip Morris International,Consumer Staples,stock
+MO,Altria,Consumer Staples,stock
+MDLZ,Mondelez,Consumer Staples,stock
+CL,Colgate-Palmolive,Consumer Staples,stock
+BRK.B,Berkshire Hathaway,Financials,stock
+JPM,JPMorgan Chase,Financials,stock
+V,Visa,Financials,stock
+MA,Mastercard,Financials,stock
+BAC,Bank of America,Financials,stock
+WFC,Wells Fargo,Financials,stock
+GS,Goldman Sachs,Financials,stock
+MS,Morgan Stanley,Financials,stock
+AXP,American Express,Financials,stock
+C,Citigroup,Financials,stock
+SCHW,Charles Schwab,Financials,stock
+BLK,BlackRock,Financials,stock
+SPGI,S&P Global,Financials,stock
+PGR,Progressive,Financials,stock
+CB,Chubb,Financials,stock
+MRSH,Marsh McLennan,Financials,stock
+BX,Blackstone,Financials,stock
+COF,Capital One,Financials,stock
+LLY,Eli Lilly,Health Care,stock
+UNH,UnitedHealth Group,Health Care,stock
+JNJ,Johnson & Johnson,Health Care,stock
+ABBV,AbbVie,Health Care,stock
+MRK,Merck,Health Care,stock
+TMO,Thermo Fisher Scientific,Health Care,stock
+ABT,Abbott Laboratories,Health Care,stock
+ISRG,Intuitive Surgical,Health Care,stock
+AMGN,Amgen,Health Care,stock
+PFE,Pfizer,Health Care,stock
+DHR,Danaher,Health Care,stock
+BSX,Boston Scientific,Health Care,stock
+SYK,Stryker,Health Care,stock
+GILD,Gilead Sciences,Health Care,stock
+VRTX,Vertex Pharmaceuticals,Health Care,stock
+MDT,Medtronic,Health Care,stock
+BMY,Bristol-Myers Squibb,Health Care,stock
+GE,GE Aerospace,Industrials,stock
+CAT,Caterpillar,Industrials,stock
+RTX,RTX,Industrials,stock
+HON,Honeywell,Industrials,stock
+UNP,Union Pacific,Industrials,stock
+BA,Boeing,Industrials,stock
+DE,Deere & Company,Industrials,stock
+LMT,Lockheed Martin,Industrials,stock
+ETN,Eaton,Industrials,stock
+UBER,Uber Technologies,Industrials,stock
+ADP,Automatic Data Processing,Industrials,stock
+UPS,United Parcel Service,Industrials,stock
+WM,Waste Management,Industrials,stock
+XOM,Exxon Mobil,Energy,stock
+CVX,Chevron,Energy,stock
+COP,ConocoPhillips,Energy,stock
+NEE,NextEra Energy,Utilities,stock
+SO,Southern Company,Utilities,stock
+DUK,Duke Energy,Utilities,stock
+PLD,Prologis,Real Estate,stock
+AMT,American Tower,Real Estate,stock
+LIN,Linde,Materials,stock

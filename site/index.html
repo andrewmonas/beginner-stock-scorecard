@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Beginner Stock Scorecard: an educational look at big-name stocks</title>
+  <meta name="description" content="A free, transparent, educational scorecard of large US stocks and ETFs, explained in plain English for beginners.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <div class="disclaimer-banner" role="note">Educational information only, not financial advice. Scores are based on past data and can be wrong. Do your own research. <a href="disclaimer.html">Full disclaimer</a></div>
+  <header id="site-header"></header>
+  <main class="wrap">
+    <h1>Which big-name stocks look strong right now?</h1>
+    <p class="lede">An educated guess, explained in plain English. Every weekday evening we score about 100 of the largest
+      US companies and major index funds from 0 to 100, using only their past prices. Every number behind every score
+      is shown, so you can learn how it works, not just read the result.</p>
+    <p class="muted small" data-asof></p>
+
+    <div class="stats" id="stats"></div>
+
+    <div class="callout">A high score means a stock has <em>recently</em> been trending up, beating the market and moving
+      calmly. It says nothing certain about tomorrow. Check the <a href="track-record.html">track record</a> to see how
+      often this approach has actually been right.</div>
+
+    <h2>Top 10 that “Look strong”</h2>
+    <p class="muted">Highest total scores today among stocks labelled “Looks strong” (70 or more).</p>
+    <div class="grid" id="strong"></div>
+
+    <h2>Top 10 steadiest</h2>
+    <p class="muted">Highest “Steadiness” scores: the smallest daily swings and smallest recent drops. Steady in the
+      past does not mean safe in the future.</p>
+    <div class="grid" id="steady"></div>
+
+    <p style="margin-top:28px"><a href="explore.html">See and sort all stocks →</a></p>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

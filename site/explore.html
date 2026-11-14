@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>All stocks · Beginner Stock Scorecard</title>
+  <meta name="description" content="Search, filter and sort every scored stock and ETF by score, label, sector and volatility.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="explore">
+  <div class="disclaimer-banner" role="note">Educational information only, not financial advice. Scores are based on past data and can be wrong. Do your own research. <a href="disclaimer.html">Full disclaimer</a></div>
+  <header id="site-header"></header>
+  <main class="wrap">
+    <h1>All stocks</h1>
+    <p class="lede">Search by name or ticker, filter, and click any column heading to sort. Click a ticker for the full breakdown.</p>
+    <p class="muted small" data-asof></p>
+    <div class="controls">
+      <input id="q" type="search" placeholder="Search, e.g. Apple or AAPL" aria-label="Search stocks">
+      <select id="label" aria-label="Filter by label">
+        <option value="">All labels</option><option>Looks strong</option><option>Mixed</option><option>Looks weak</option>
+      </select>
+      <select id="sector" aria-label="Filter by sector"><option value="">All sectors</option></select>
+    </div>
+    <p class="muted small" id="count"></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr id="head"></tr></thead>
+        <tbody id="rows"><tr><td>Loading…</td></tr></tbody>
+      </table>
+    </div>
+    <p class="small muted">Volatility = how much the price swings in a year (lower is calmer). 6-month return is past
+      performance only.</p>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="js/common.js"></script>
+  <script src="js/explore.js"></script>
+</body>
+</html>
