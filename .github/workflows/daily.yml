@@ -6,7 +6,7 @@ on:
   workflow_dispatch:           # adds a "Run workflow" button on the Actions tab
   push:
     branches: [main]
-    paths: ["site/**", "!site/data/**"]   # republish (without rescoring) when the pages change
+    paths: ["site/**", "!site/data/**", ".github/workflows/**"]   # republish (without rescoring) when pages or this workflow change
 
 permissions:
   contents: write   # to save each day's scores back into the repository
